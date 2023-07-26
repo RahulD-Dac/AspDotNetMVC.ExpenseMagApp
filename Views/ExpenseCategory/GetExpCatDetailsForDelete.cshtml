@@ -1,0 +1,39 @@
+﻿@model ExpenseCategoryEntity
+
+@{
+    ViewData["Title"] = "Delete new  ExpenseCategory";
+
+}
+<form method="post" asp-action="Delete">
+    <input asp-for="ExpenseCateoryId" hidden />
+
+    <div class="border p-5">
+
+
+        @*                <div asp-validation-summary="ModelOnly" class="text-danger">
+        *@
+
+        <div class="from-group  row">
+            <h2 class="text-black-50 p1-2">Delete YOur Expense Category</h2>
+
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <label asp-for="ExpenseCateoryName"></label>
+                <input asp-for="ExpenseCateoryName" class="form-control "   disabled/>
+                <span asp-validation-for="ExpenseCateoryName" class="text-danger"></span>
+            </div>
+        </div>
+
+
+
+        <br />
+        <div class="w-12 btn-group" role="group">
+            <input type="submit" class="btn btn-primary mx-1" value="Delete ?" />
+            <a asp-action="Index" class="btn btn-danger mx-1"> Back </a>
+
+        </div>
+    </div>
+</form>
